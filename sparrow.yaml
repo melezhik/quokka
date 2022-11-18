@@ -21,7 +21,7 @@ tasks:
    code: |
       set -e
       cd source
-      sudo python3 setup.py install
+      pip3 install -e .
    depends:
     -
       name: install-python
