@@ -21,7 +21,8 @@ tasks:
    code: |
       set -e
       cd source
-      pip3 install polars==0.14.29
+      #pip3 install polars==0.14.29
+      pip3 install --upgrade pip setuptools  
       pip3 install -e .
    depends:
     -
