@@ -1,3 +1,6 @@
+image:
+  - melezhik/sparrow:debian
+  
 tasks:
   -
    name: example 
@@ -21,13 +24,14 @@ tasks:
    code: |
       set -e
       cd source
-      #pip3 install polars==0.14.29
-      sudo pip3 install --upgrade pip setuptools  
       pip3 install -e .
    depends:
     -
       name: install-python
   -
    name: install-python
-   plugin: sparkyci-package-python
+   language: Bash
+   code: |
+     set -e
+     sudo apt-get install -y python3-pip
       
