@@ -21,6 +21,7 @@ tasks:
    code: |
       set -e
       cd source
+      pip3 install polars
       pip3 install -e .
    depends:
     -
